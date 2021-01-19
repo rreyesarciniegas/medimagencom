@@ -1,0 +1,342 @@
+/* ==========================================================================
+   WooCommerce Dropdown Cart styles - begin
+   ========================================================================== */
+
+.mkdf-shopping-cart-holder {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    padding: 0 4px 0 10px;
+
+    .touch & {
+        cursor: pointer;
+    }
+
+    &.mkdf-cart-info-is-disabled {
+
+        .mkdf-header-cart {
+
+            .mkdf-cart-info {
+                display: none;
+            }
+        }
+    }
+
+    .mkdf-shopping-cart-inner {
+        position: relative;
+        display: table;
+        height: 100%;
+    }
+
+    .mkdf-header-cart {
+        position: relative;
+        display: table-cell;
+        vertical-align: middle;
+        color: #333;
+
+        .mkdf-cart-count-holder {
+            position: absolute;
+            display: block;
+            background-color: $first-main-color;
+            width: 15px;
+            height: 15px;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            border-radius:50%;
+            top: 30px;
+            left: 12px;
+            text-align: center;
+            .mkdf-cart-count {
+                font-size: 10px;
+                font-weight: 600;
+                color: #fff;
+                top: -50%;
+                position: relative;
+                @include mkdfTransform(translateX(-50%));
+            }
+        }
+
+        .mkdf-cart-icon {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 22px;
+            line-height: 1em;
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        .mkdf-cart-info {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0 0 0 5px;
+            font-size: 14px;
+            line-height: 1;
+            clear: both;
+
+            .mkdf-cart-info-number {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                float: left;
+                padding: 0 8px 0 0;
+                margin: 0 5px 0 0;
+
+                &:after {
+                    position: absolute;
+                    right: -1px;
+                    content: '-';
+                }
+            }
+
+            .mkdf-cart-info-total {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+                float: left;
+            }
+        }
+
+        &:hover {
+            color: $default-heading-color;
+        }
+    }
+
+    &:hover {
+
+        .mkdf-shopping-cart-dropdown {
+            top: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+
+    }
+}
+
+.mkdf-header-standard-extended {
+    .mkdf-shopping-cart-holder:hover .mkdf-shopping-cart-dropdown {
+        top: 146%;
+    }
+}
+
+.mkdf-sticky-holder .mkdf-shopping-cart-holder .mkdf-header-cart .mkdf-cart-count-holder {
+    top: 19px;
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-shopping-cart-holder .mkdf-header-cart {
+    color: $header-dark-color;
+
+    &:hover {
+        color: $header-dark-hover-color;
+    }
+}
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-shopping-cart-holder .mkdf-header-cart {
+    color: $header-light-color;
+
+    &:hover {
+        color: $header-light-hover-color;
+    }
+}
+
+.mkdf-shopping-cart-dropdown {
+    position: absolute;
+    top: calc(100% + 50px);
+    left: auto;
+    right: 0;
+    width: 308px;
+    background-color: #fff;
+    border: 1px solid $default-border-color;
+    text-align: left;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    box-sizing: border-box;
+    @include mkdfTransition(all 0.35s cubic-bezier(.53,.01,.18,1));
+
+    ul {
+        margin: 25px;
+        padding: 0;
+
+        li {
+            @include mkdfTableLayout;
+            padding: 20px 0;
+            border-bottom: 1px solid $default-border-color;
+            box-sizing: border-box;
+
+            &.mkdf-empty-cart {
+                color: initial;
+                border: 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .mkdf-item-image-holder {
+        position: relative;
+        display: table-cell;
+        height: 100%;
+        width: 84px;
+        vertical-align: top;
+
+        img {
+            display: block;
+        }
+    }
+
+    .mkdf-item-info-holder {
+        @include mkdfTableCellLayout();
+        vertical-align: top;
+        padding-left: 20px;
+
+        .mkdf-product-title {
+            display: block;
+            margin: 0;
+            padding: 0 20px 0 0;
+            box-sizing: border-box;
+            font-size: 15px;
+            line-height: 21px;
+        }
+
+        .remove {
+            position: absolute;
+            top: 0;
+            right: 3px;
+            width: 18px;
+            height: 18px;
+            color: $default-heading-color;
+	        font-size: 26px;
+	        line-height: 24px;
+            text-align: center;
+
+            span {
+                display: block;
+                line-height: inherit;
+
+                &:before {
+                    display: block;
+                    line-height: inherit;
+                }
+            }
+
+            &:hover {
+                color: $first-main-color;
+            }
+        }
+
+        .mkdf-quantity {
+            display: block;
+            color: initial;
+            font-size: 14px;
+            line-height: 26px;
+        }
+
+        .amount {
+            display: block;
+            color: $default-heading-color;
+            line-height: 1;
+            font-size: 14px;
+            line-height: 26px;
+        }
+    }
+
+    .mkdf-cart-bottom {
+        padding: 21px 0 0;
+
+        .mkdf-subtotal-holder {
+            position: relative;
+            display: table;
+            width: 100%;
+            margin: 0 0 16px;
+
+            > * {
+                display: table-cell;
+                vertical-align: top;
+                color: $default-heading-color;
+                line-height: 20px;
+            }
+
+            .mkdf-total-amount {
+                text-align: right;
+	            font-size: 16px;
+            }
+        }
+
+        .mkdf-cart-description {
+            @include mkdfRelativeHolderLayout();
+            margin: 0 0 10px;
+
+            .mkdf-cart-description-inner {
+                position: relative;
+                display: table;
+                width: 100%;
+                height: 100%;
+                padding: 17px 30px;
+                background-color: #f4f4f4;
+                text-align: center;
+                box-sizing: border-box;
+
+                span {
+                    position: relative;
+                    display: table-cell;
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: middle;
+                    color: $default-heading-color;
+                    font-size: 12px;
+                    line-height: 18px;
+                }
+            }
+        }
+
+        .mkdf-view-cart {
+            @include mkdfRelativeHolderLayout();
+            height: 44px;
+            line-height: 44px;
+            padding: 0 26px;
+            font-size: 11px;
+            font-weight: 500;
+	        letter-spacing: 1px;
+            color: #fff;
+            background-color: $first-main-color;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            -webkit-appearance: none;
+            box-sizing: border-box;
+            @include mkdfTransition(color .2s ease-in-out, background-color .2s ease-in-out, border-color .2s ease-in-out);
+
+            span {
+                display: block;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: $default-heading-color;
+            }
+        }
+    }
+}
+
+.mkdf-vertical-menu-area {
+
+    .mkdf-shopping-cart-dropdown {
+        display: none !important;
+    }
+}
+/* ==========================================================================
+   WooCommerce Dropdown Cart styles - end
+   ========================================================================== */

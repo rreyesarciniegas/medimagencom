@@ -1,0 +1,89 @@
+/* ==========================================================================
+   Header Standard Extended style - begin
+   ========================================================================== */
+.mkdf-header-standard-extended {
+
+    .mkdf-page-header {
+
+        .mkdf-logo-area {
+	        height: 83px;
+            z-index: 1; //to be above menu area in order to cover shadow
+	        box-sizing: border-box;
+
+            .mkdf-logo-wrapper a {
+                max-height: 83px;
+            }
+
+            .mkdf-vertical-align-containers {
+
+                .mkdf-position-right-inner {
+                    height: auto;
+                }
+            }
+
+			.widget {
+				margin: 0 24px 0 0;
+				padding: 3px 45px 0 0;
+				display: inline-block;
+				border: 0;
+				border-right: 1px solid #e0e0e0;
+				text-align: left;
+
+				&:last-child {
+					border-right: 0;
+					margin-right: 0;
+					padding-right: 0;
+				}
+				.mkdf-info-icon {
+					.mkdf-info-icon-content {
+						font-size: 13px;
+					}
+				}
+			}
+
+            .mkdf-logo-widget-area {
+	            position: relative;
+	            display: inline-block;
+	            vertical-align: middle;
+	            margin-left: 8px;
+            }
+
+            .mkdf-right-from-logo-widget {
+	            position: relative;
+	            padding: 0 20px 0 0;
+	            float: left;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .mkdf-menu-area {
+			border-top: 1px solid #e0e0e0;
+	        height: 50px;
+
+			.mkdf-shopping-cart-holder .mkdf-header-cart .mkdf-cart-count-holder {
+				top: -5%;
+			}
+
+            .mkdf-main-menu {
+                left: -21px; // because undeline hover effect initial position
+            }
+
+            .mkdf-vertical-align-containers {
+
+                .mkdf-position-left-inner {
+                    height: 100%;
+                }
+
+                .mkdf-position-right-inner {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Header Standard Extended style - end
+   ========================================================================== */

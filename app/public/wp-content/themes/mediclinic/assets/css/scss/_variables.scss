@@ -1,0 +1,94 @@
+$breakpoints: (
+		laptop-landscape-large: 1440px,
+		laptop-landscape-medium: 1280px,
+		laptop-landscape: 1200px,
+		ipad-landscape: 1024px,
+		ipad-portrait: 768px,
+		phone-landscape: 680px,
+		phone-portrait: 480px,
+		smaller-phone-portrait: 320px
+);
+
+$grid-width: 1100px;
+$grid-width-laptop-landscape: 950px;
+$grid-width-ipad-landscape: 768px;
+$grid-width-ipad-portrait: 600px;
+$grid-width-phone-landscape: 420px;
+$grid-width-phone-portrait: 300px;
+$grid-width-smaller-phone-portrait: 95%;
+
+$grid-width-boxed: 1150px;
+$grid-width-laptop-landscape-boxed: 1000px;
+$grid-width-ipad-landscape-boxed: 818px;
+$grid-width-ipad-portrait-boxed: 650px;
+$grid-width-phone-landscape-boxed: 470px;
+$grid-width-phone-portrait-boxed: 350px;
+$grid-width-smaller-phone-portrait-boxed: 96%;
+
+$grid-width-1300: 1300px;
+$grid-width-1200: 1200px;
+$grid-width-1000: 1000px;
+$grid-width-800: 800px;
+
+$default-text-font: 'Open Sans', sans-serif;
+$default-heading-font: 'Poppins', sans-serif;
+
+$first-main-color: #43d5cb;
+$second-main-color: #4e6dcc;
+$default-heading-color: #333333;
+$default-text-color: #6e6e6e;
+
+$default-background-color: #fff;
+$default-border-color: #e1e1e1;
+
+$header-light-color: #fff;
+$header-light-hover-color: #fff;
+$header-dark-color: #333;
+$header-dark-hover-color: #333;
+
+
+//responsive breakpoints
+$laptop-landscape-large-plus-pixel: 1441px;
+$laptop-landscape-large: 1440px;
+$laptop-landscape-medium-plus-pixel: 1281px;
+$laptop-landscape-medium: 1280px;
+$laptop-landscape-plus-pixel: 1201px;
+$laptop-landscape: 1200px;
+$ipad-landscape-plus-pixel: 1025px;
+$ipad-landscape: 1024px;
+$ipad-portrait-plus-pixel: 769px;
+$ipad-portrait: 768px;
+$phone-landscape-plus-pixel: 681px;
+$phone-landscape: 680px;
+$phone-portrait-plus-pixel: 481px;
+$phone-portrait: 480px;
+$smaller-phone-portrait-plus-pixel: 321px;
+$smaller-phone-portrait: 320px;
+
+$aux-easing-1: cubic-bezier(0.19, 0.65, 0.02, 0.93);
+
+//perfect scroll variables
+// Colors
+$ps-border-radius: 6px !default;
+
+$ps-rail-default-opacity: 0 !default;
+$ps-rail-container-hover-opacity: 0.6 !default;
+$ps-rail-hover-opacity: 0.9 !default;
+
+$ps-bar-bg: transparent !default;
+$ps-bar-container-hover-bg: #aaa !default;
+$ps-bar-hover-bg: #999 !default;
+$ps-rail-hover-bg: #eee !default;
+
+// Sizes
+$ps-scrollbar-x-rail-bottom: 0px !default;
+$ps-scrollbar-x-rail-height: 15px !default;
+$ps-scrollbar-x-bottom: 2px !default;
+$ps-scrollbar-x-height: 6px !default;
+$ps-scrollbar-x-hover-height: 11px !default;
+
+$ps-scrollbar-y-rail-right: 0 !default;
+$ps-scrollbar-y-rail-width: 15px !default;
+$ps-scrollbar-y-right: 2px !default;
+$ps-scrollbar-y-width: 6px !default;
+$ps-scrollbar-y-hover-width: 11px !default;

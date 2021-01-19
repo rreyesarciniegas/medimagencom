@@ -1,0 +1,76 @@
+/* ==========================================================================
+   Title responsive style - begin
+   ========================================================================== */
+
+@include ipad-landscape {
+    
+    .mkdf-title {
+
+        &.mkdf-standard-type .mkdf-breadcrumbs-holder {
+            margin-top: 0;
+        }
+        
+        &.mkdf-has-background {
+            background: rgba(0, 0, 0, 0) none repeat scroll 0 0 !important;
+            height: auto !important;
+            padding: 0 !important;
+        }
+        
+        &.mkdf-title-image-not-responsive {
+            
+            .mkdf-title-image {
+                display: block;
+            }
+        }
+        
+        .mkdf-title-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            height: 100% !important;
+            padding: 0 !important;
+            
+            .mkdf-container {
+                display: block;
+                height: 100%;
+            }
+            
+            .mkdf-container-inner {
+                display: table;
+                height: 100%;
+            }
+            
+            .mkdf-title-subtitle-holder {
+                display: table-cell;
+                vertical-align: middle;
+                width: 100%;
+                padding: 0 !important;
+            }
+    
+            .mkdf-title-subtitle {
+                padding: 0 !important; // to remove side subtitle padding option if is set
+            }
+        }
+    }
+}
+
+@include ipad-portrait {
+    
+    .mkdf-title {
+        
+        &.mkdf-standard-type {
+            
+            .mkdf-breadcrumbs-holder {
+                position: relative !important;
+                top: auto !important;
+                left: auto !important;
+                right: auto !important;
+                width: 100%;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Title responsive style - end
+   ========================================================================== */

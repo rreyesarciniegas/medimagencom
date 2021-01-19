@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Blog List widget style - begin
+   ========================================================================== */
+
+.widget.mkdf-blog-list-widget {
+
+    > h4 {
+        margin: 0 0 15px;
+    }
+
+    aside.mkdf-sidebar &{
+        .mkdf-post-title{
+            line-height: .9em;
+            font-family: $default-text-font;
+            font-size: 15px;
+            font-weight: 500;
+            color: $first-main-color;
+        }
+    }
+
+    footer .mkdf-footer-top &,
+    .mkdf-top-bar & {
+
+        > h2 {
+            margin: 0 0 8px;
+        }
+    }
+
+    section.mkdf-side-menu &{
+
+        border-bottom: $widget-border-color $widget-border-width $widget-border-style;
+        padding-bottom: 20px;
+
+        .mkdf-post-title{
+
+            font-size: 15px;
+            line-height: 0.7em;
+            font-weight: 500;
+            font-family: $default-text-font;
+        }
+    }
+}
+/* ==========================================================================
+   Blog List widget style - end
+   ========================================================================== */

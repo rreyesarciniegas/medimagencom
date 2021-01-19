@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Blog List shortcode - Simple type style - begin
+   ========================================================================== */
+
+.mkdf-blog-list-holder {
+    
+    &.mkdf-bl-simple {
+
+        .mkdf-bl-item{
+            margin-bottom: 17px;
+        }
+        
+        .mkdf-post-image {
+            display: table-cell;
+            vertical-align: top;
+            width: 50px;
+
+            img{
+                border-radius: 50%;
+                height: 50px;
+            }
+        }
+        
+        .mkdf-bli-content {
+            display: table-cell;
+            vertical-align: top;
+            width: auto;
+            padding-left: 21px;
+            
+            .mkdf-post-info-date {
+                display: block;
+                margin: 4px 0 0;
+                line-height: 1;
+                
+                a {
+                    font-family: $default-heading-font;
+                    font-size: 12px;
+                    color: $default-text-color;
+                    @include mkdfTransition(all .3s ease-out);
+
+                    &:hover {
+                        color: $default-heading-color;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog List shortcode - Simple type style - end
+   ========================================================================== */

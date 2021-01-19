@@ -1,0 +1,42 @@
+/* ==========================================================================
+# Search template responsive style - begin
+========================================================================== */
+
+@include ipad-landscape {
+    
+    .mkdf-search-page-holder {
+        
+        article {
+            
+            .mkdf-post-image {
+                width: 82px;
+            }
+            
+            .mkdf-post-title-area {
+                padding: 0 0 0 102px;
+                min-height: 82px;
+            }
+        }
+    }
+}
+
+@include phone-landscape {
+    
+    .mkdf-search-page-holder {
+        
+        article {
+            
+            .mkdf-post-image {
+                width: 72px;
+            }
+            
+            .mkdf-post-title-area {
+                padding: 0 0 0 92px;
+                min-height: 72px;
+            }
+        }
+    }
+}
+/* ==========================================================================
+# Search template responsive style - end
+========================================================================== */

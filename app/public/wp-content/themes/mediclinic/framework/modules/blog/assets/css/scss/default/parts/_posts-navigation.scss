@@ -1,0 +1,112 @@
+/* Single posts navigation styles - begin
+    ====================================================================== */
+
+.mkdf-blog-single-navigation {
+    position: relative;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    padding: 0;
+    clear: both;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dadada;
+
+
+    .mkdf-blog-single-navigation-inner {
+        padding: 39px 0 30px;
+    }
+
+    .mkdf-blog-single-prev,
+    .mkdf-blog-single-next {
+
+        color: #000;
+        font-weight: 500;
+
+        .mkdf-blog-single-nav-mark {
+            font-size: 48px;
+            line-height: inherit;
+            color: inherit;
+
+            &:before {
+                display: block;
+                line-height: inherit;
+            }
+        }
+
+        .mkdf-blog-single-nav-label {
+            color: inherit;
+            font-family: $default-heading-font;
+        }
+
+        &:hover {
+            color: $first-main-color;
+        }
+    }
+
+    .mkdf-blog-single-prev {
+        float: left;
+
+        .mkdf-blog-single-nav-mark,
+        .mkdf-blog-single-nav-label {
+            left: 160px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline;
+        }
+
+        .mkdf-blog-single-nav-mark {
+            margin: 0 14px 0 0;
+        }
+
+        &.mkdf-no-nav-image {
+            .mkdf-blog-single-nav-mark,
+            .mkdf-blog-single-nav-label {
+                left: 0;
+            }
+        }
+    }
+
+    .mkdf-blog-single-next {
+        float: right;
+        text-align: right;
+
+        .mkdf-blog-single-nav-mark,
+        .mkdf-blog-single-nav-label {
+            right: 160px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: inline;
+        }
+
+        .mkdf-blog-single-nav-mark {
+            margin: 0 0 0 14px;
+        }
+
+        &.mkdf-no-nav-image {
+            .mkdf-blog-single-nav-mark,
+            .mkdf-blog-single-nav-label {
+                right: 0;
+            }
+        }
+    }
+}
+
+.mkdf-single-links-pages {
+    clear: both;
+    margin: 20px 0 5px;
+
+    .mkdf-single-links-pages-inner {
+
+        > a,
+        > span {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 15px 5px 0;
+        }
+    }
+}
+/* Single posts navigation styles - end
+    ====================================================================== */

@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+    mysql:
+        image: mysql:5.7
+        restart: always
+        ports:
+            - 3308:3306
+        environment:
+            MYSQL_USER: usr_pak
+            MYSQL_ROOT_PASSWORD: Ron@ld2021
+            MYSQL_DATABASE: paktamy
+            MYSQL_PASSWORD: Ron@ld2021
+
+    wordpress:
+        depends_on:
+            - mysql
+        image: wordpress
+        ports:
+            - 90:80
+        restart: always
+        environment:
+            WORDPRESS_DB_HOST: mysql:3306
+            WORDPRESS_DB_USER: root
+            WORDPRESS_DB_PASSWORD: Ron@ld2021

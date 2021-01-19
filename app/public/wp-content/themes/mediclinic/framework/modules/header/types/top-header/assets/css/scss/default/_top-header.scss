@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Top header style - begin
+   ========================================================================== */
+
+.mkdf-top-bar {
+	@include mkdfRelativeHolderLayout();
+	height: 38px;
+	color: #6e6e6e;
+	font-size: 13px;
+	background-color: #fff;
+	border-bottom: 1px solid #e0e0e0;
+	z-index: 111;
+	
+	> .mkdf-vertical-align-containers {
+		padding: 0 45px;
+	}
+	
+	.mkdf-grid {
+		height: 100%;
+		
+		.mkdf-vertical-align-containers {
+			padding-left: 0;
+			padding-right: 0;
+			
+			.mkdf-top-bar-in-grid-padding & {
+				padding: 0 45px;
+			}
+		}
+	}
+	.mkdf-position-right {
+		.widget {
+			padding-left: 34px;
+		}
+	}
+	
+	.widget {
+		margin: 0;
+		padding: 0;
+		display: inline-block;
+
+		.mkdf-info-icon .mkdf-icon-info-icon {
+			position: relative;
+			top: 3px;
+			margin-right: 15px!important;
+		}
+	}
+}
+/* ==========================================================================
+   Top header style - end
+   ========================================================================== */

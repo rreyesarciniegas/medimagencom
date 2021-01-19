@@ -1,0 +1,215 @@
+/* ==========================================================================
+   Title style - begin
+   ========================================================================== */
+
+.mkdf-title {
+    @include mkdfRelativeHolderLayout();
+    height: 200px;
+    text-align: left;
+    z-index: 101;
+    background-color: #f6f6f6;
+    background-position: center 0;
+    background-repeat: no-repeat;
+
+    &.mkdf-has-parallax-background {
+        position: relative;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        z-index: 101;
+    }
+
+    &.mkdf-content-center-alignment {
+        text-align: center;
+    }
+
+    &.mkdf-content-right-alignment {
+        text-align: right;
+    }
+
+    &.mkdf-has-responsive-background {
+        height: auto !important;
+
+        .mkdf-title-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+
+            .mkdf-container {
+                display: block;
+                height: 100%;
+            }
+
+            .mkdf-container-inner {
+                display: table;
+                height: 100%;
+            }
+
+            .mkdf-title-subtitle-holder {
+                display: table-cell;
+                vertical-align: middle;
+                width: 100%;
+            }
+        }
+    }
+
+    &.mkdf-breadcrumb-type {
+         .mkdf-title-holder .mkdf-breadcrumbs a,
+         .mkdf-title-holder .mkdf-breadcrumbs span {
+             color: #333;
+         }
+    }
+
+    .mkdf-title-image {
+
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+    }
+
+    &.mkdf-title-image-responsive {
+        height: auto !important;
+    }
+
+    &.mkdf-title-image-not-responsive {
+
+        .mkdf-title-image {
+            display: none;
+        }
+    }
+
+    .mkdf-title-holder {
+        position: relative;
+        display: table;
+        height: 100%;
+        width: 100%;
+
+        .mkdf-container {
+            display: table-row;
+            vertical-align: middle;
+            background-color: transparent;
+        }
+
+        .mkdf-container-inner {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0 !important;
+        }
+
+        .mkdf-title-subtitle-holder {
+            position: relative;
+            display: block;
+            padding: 0;
+            z-index: 25;
+        }
+
+        .mkdf-title-subtitle-holder-inner {
+            position: relative; //because of the breadcrumbs (absolute position) on standard type title
+        }
+
+        /* #Standard title - start
+        ========================================================================== */
+    
+        .mkdf-page-title {
+            position: relative;
+            display: block;
+            width: 100%;
+            vertical-align: middle;
+            margin: 0;
+    
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        .mkdf-subtitle {
+            display: block;
+            margin-top: 4px;
+
+            span {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        /* #Standard title - end
+        ========================================================================== */
+
+        /* #Breadcrumb title - start
+        ========================================================================== */
+
+        .mkdf-breadcrumbs-holder {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .mkdf-breadcrumbs {
+
+            a, 
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                color: $default-text-color;
+            }
+
+            a:hover {
+                color: $default-heading-color;
+            }
+        }
+
+        /* #Breadcrumb title - end
+        ========================================================================== */
+    }
+
+    &.mkdf-standard-type {
+
+        .mkdf-breadcrumbs-holder {
+            position: relative;
+            display: block;
+            height: 100%;
+            margin-top: 10px;
+
+            .mkdf-breadcrumbs {
+                display: table;
+                height: 100%;
+                width: 100%;
+            }
+
+            .mkdf-breadcrumbs-inner {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        &.mkdf-content-left-alignment {
+
+            .mkdf-breadcrumbs-holder {
+                right: 0;
+            }
+        }
+
+        &.mkdf-content-right-alignment {
+
+            .mkdf-breadcrumbs-holder {
+                left: 0;
+            }
+        }
+
+        &.mkdf-content-center-alignment {
+
+            .mkdf-breadcrumbs-holder {
+                position: relative;
+                top: auto;
+                height: auto;
+                display: block;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Title style - end
+   ========================================================================== */

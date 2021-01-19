@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Blog Slider shortcode style - begin
+   ========================================================================== */
+
+.mkdf-blog-slider-holder {
+
+    .mkdf-blog-slider-item {
+        @include mkdfRelativeHolderLayout();
+        list-style-type: none;
+        text-align: center;
+
+        .mkdf-item-image {
+            @include mkdfRelativeHolderLayout();
+
+            &::after {
+                @include mkdfAbsoluteHolderLayout();
+                content: "";
+                background: rgba($default-heading-color, 0.3);
+            }
+        }
+
+        .mkdf-item-text-wrapper {
+            @include mkdfAbsoluteHolderLayout();
+            opacity: 0;
+            @include mkdfTransition(opacity 0.45s ease-out);
+        }
+
+        .mkdf-item-text-holder {
+            @include mkdfTableLayout();
+        }
+    
+        .mkdf-item-text-holder-inner {
+            @include mkdfTableCellLayout();
+            padding: 0 5%;
+        }
+    
+        .mkdf-item-info-section{
+            margin-bottom: 5px;
+    
+            > div {
+                position: relative;
+                display: inline-block;
+                padding-right: 25px;
+                margin-left: 5px;
+        
+                &:after {
+                    content: "/";
+                    position: absolute;
+                    top: 0;
+                    right: 5px;
+                }
+        
+                &:first-child {
+                    margin-left: 0;
+                }
+        
+                &:last-child {
+            
+                    &:after {
+                        content: '';
+                    }
+                }
+        
+                span {
+                    color: #444;
+                }
+            }
+        }
+    
+        .mkdf-item-title {
+            margin: 0 0 15px;
+            color: #fff;
+        }
+
+        .mkdf-section-button-holder {
+            @include mkdfRelativeHolderLayout();
+            margin: 20px 0 0;
+
+            a {
+                color: #fff;
+
+                &:hover {
+                    color: $first-main-color !important;
+                }
+            }
+        }
+    }
+
+    .active.center {
+	    
+        .mkdf-blog-slider-item {
+	        
+            .mkdf-item-text-wrapper {
+                opacity: 1;
+            }
+        }
+    }
+}
+/* ==========================================================================
+   Blog Slider shortcode style - end
+   ========================================================================== */

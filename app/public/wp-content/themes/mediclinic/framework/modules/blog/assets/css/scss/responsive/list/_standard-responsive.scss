@@ -1,0 +1,64 @@
+@include phone-landscape {
+	.mkdf-blog-holder.mkdf-blog-standard {
+
+		article {
+
+
+			&.format-quote,
+			&.format-link {
+				.mkdf-post-mark {
+					display: block;
+					width: 100%;
+					margin-bottom: 13px;
+				}
+
+				.mkdf-post-text {
+					padding: 37px 37px 20px
+				}
+
+				.mkdf-post-quote-holder,
+				.mkdf-post-link-holder {
+					display: block;
+					padding-left: 0;
+				}
+
+				.mkdf-post-info-bottom {
+					width: 100%;
+					.mkdf-post-info-bottom-left {
+						width: 100%;
+					}
+					.mkdf-post-info-bottom-right {
+
+					}
+
+					.mkdf-blog-share {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include phone-portrait{
+	.mkdf-blog-holder.mkdf-blog-standard {
+		article {
+			.mkdf-post-info-bottom {
+				.mkdf-post-info-bottom-right {
+					text-align: left;
+					width: 100%;
+
+					.mkdf-post-info-author {
+						display: block;
+					}
+
+					.mkdf-post-info-comments-holder {
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+

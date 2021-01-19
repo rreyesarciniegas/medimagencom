@@ -1,0 +1,359 @@
+table.tt_timetable {
+	font-weight: 700;
+	color: #808080;
+	font-size: 16px;
+	border-collapse: collapse !important; //plugin is also using important
+
+	border: 1px solid #e5e5e5;
+
+	thead tr {
+		border: 1px solid #e5e5e5;
+	}
+
+	tbody tr {
+		border: 1px solid #e5e5e5;
+	}
+
+	td.tt_hours_column {
+		font-weight: 500;
+		color: #acacac !important;
+		text-transform: uppercase;
+		font-size: 12px !important;
+	}
+
+	th {
+		font-weight: 500;
+		color: #0e0e0e;
+		height: 70px;
+		font-size: 15px !important;
+		font-family: $default-heading-font;
+
+		border-right: 1px solid #e5e5e5 !important; //plugin is also using important
+		border-bottom: 1px solid #e5e5e5 !important; //plugin is also using important
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	td {
+		font-weight: 400;
+		color: #808080!important;
+		font-size: 16px;
+		border-right: 1px solid #e5e5e5 !important;
+		border-bottom: 1px solid #e5e5e5 !important;
+	}
+
+	.row_gray {
+		background-color: transparent !important; //important because plugin css is also using important
+	}
+
+	.event_container {
+		padding: 29px 10px;
+	}
+
+	tbody tr:nth-child(even) {
+		background-color: #fff !important;
+	}
+
+	tbody tr:nth-child(odd) {
+		background-color: #fafafa !important;;
+	}
+
+	.event {
+		background-color: transparent;
+		color: #808080;
+
+		a, .event_header,
+		.after_hour_text {
+			color: #4f6dcd !important; //important because plugin scss is also using important
+		}
+
+		.before_hour_text {
+			font-size: 11px;
+			font-weight: 500;
+			color: #acacac;
+		}
+
+		.event_header {
+			margin-bottom: 6px;
+			font-weight: 500;
+		}
+
+		.event_container .hours {
+			color: #808080;
+		}
+
+		&:not(.tt_single_event) {
+			.event_container {
+				border-bottom: 1px solid #e5e5e5;
+
+				&:last-child {
+					border-bottom: none;
+				}
+			}
+		}
+
+		hr {
+			display: none;
+		}
+
+		&:hover, .event_container.tt_tooltip:hover {
+			background-color: transparent;
+		}
+
+		&.tt_tooltip:hover .hours, .event_container.tt_tooltip:hover .hours {
+			color: #808080;
+		}
+
+		a:hover, a.event_header:hover {
+			text-decoration: none;
+
+			color: $second-main-color !important;
+		}
+	}
+
+	.tt_tooltip_content {
+		color: #fff !important;
+		background: $second-main-color;
+		text-align: center;
+		border-radius: 5px;
+		margin: 0 10px;
+		padding: 15px;
+		font-size: 14px;
+		font-weight:500;
+		text-transform: none;
+		height: 100%;
+		line-height: 18px;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	.tt_tooltip_content a {
+		color: #fff !important;
+		font-size: 14px;
+		font-weight: 500;
+		margin-bottom: 8px;
+		display: none;
+
+		&:hover {
+			color: #fff !important;
+		}
+	}
+
+	.tt_tooltip .tt_tooltip_arrow {
+		border-color: $second-main-color transparent;
+		position: absolute;
+		left: 60px;
+		border-width: 16px 16px 0;
+		bottom: -10px;
+	}
+
+	.tt_tooltip .tt_tooltip_text {
+		visibility: hidden;
+		opacity: 0;
+		@include mkdfTransformOrigin(50% 200%);
+		@include mkdfTransform(scale(.8));
+		@include mkdfTransition(transform .3s cubic-bezier(.18,.6,.01,1.28),opacity .2s,visibility .2s);
+	}
+
+	.tt_tooltip:hover .tt_tooltip_text {
+		visibility: visible;
+		opacity: 1;
+		@include mkdfTransform(scale(1));
+	}
+}
+
+.tt_responsive .tt_timetable.small {
+	.box_header {
+		color: #808080 !important;
+		font-size: 20px !important;
+		text-align: left;
+
+		margin-bottom: 20px;
+	}
+
+	.tt_items_list {
+		li {
+			border-color: #e5e5e5;
+
+			padding: 15px 0 !important;
+		}
+
+		.event_container {
+			text-align: left;
+		}
+
+		a,
+		.value {
+			font-weight: 700;
+			font-size: 16px;
+			color: #808080 !important;
+		}
+	}
+}
+
+.tabs_box_navigation.sf-timetable-menu li:hover ul,
+.tabs_box_navigation.sf-timetable-menu li.sfHover ul {
+	top: 37px!important;
+}
+
+.sf-timetable-menu li ul li a:hover,
+.sf-timetable-menu li ul li.selected a:hover {
+	background-color: $first-main-color;
+}
+
+.sf-timetable-menu li ul {
+	width: 227px;
+}
+
+.sf-timetable-menu li ul li {
+	width: 217px!important;
+}
+
+.tabs_box_navigation.sf-timetable-menu {
+	float: right!important;
+	margin-right: 0!important;
+	margin-bottom: 45px!important;
+	.tabs_box_navigation_selected {
+		border-radius: 5px;
+		padding: 10px 19px !important;
+		width: 230px;
+		background-color: #fafafa!important;
+		color: #afafaf!important;
+		border: 1px solid #fafafa!important;
+		&:hover {
+			box-shadow: none;
+		}
+		label {
+			font-size: 15px!important;
+			font-weight: 300!important;
+			font-family: $default-text-font;
+		}
+	}
+}
+
+table.tt_timetable {
+	border-collapse: separate !important;
+	border-spacing: 0 !important;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.13);
+	-moz-box-shadow:    0px 0px 10px 0px rgba(0, 0, 0, 0.13);
+	box-shadow:         0px 0px 10px 0px rgba(0, 0, 0, 0.13);
+	tr {
+		th:last-child {
+			border-right: 0 !important;
+		}
+		td:last-child {
+			border-right: 0 !important;
+		}
+	}
+	tbody {
+		-webkit-border-radius: 0 0 10px 10px;
+		-moz-border-radius: 0 0 10px 10px;
+		border-radius: 0 0 10px 10px;
+		tr:last-child {
+			border-radius: 0 0 10px 10px;
+			td {
+				border-bottom-color: transparent !important;
+				&:first-child {
+					border-bottom-left-radius: 10px;
+				}
+				&:last-child {
+					border-bottom-right-radius: 10px;
+				}
+			}
+		}
+	}
+}
+
+.tabs_box_navigation .tabs_box_navigation_icon{
+	width: 40px;
+	height: 39px;
+	background: none;
+	background-color: $first-main-color;
+	color: #fff;
+	position: absolute;
+	margin-top: 0!important;
+	border-radius: 0 5px 5px 0;
+	right: 0;
+	top: 0;
+
+	&:after {
+		content: "\f123";
+		font-family: IonIcons;
+		font-size: 14px;
+		background: none!important;
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		@include mkdfTransform(translate(50%, -50%));
+	}
+}
+
+body .tt_tabs {
+
+	.tt_timetable .event .after_hour_text {
+		font-size: 13px !important;
+	}
+
+	.tt_timetable th {
+		font-size: 15px !important;
+	}
+}
+
+.tt_tabs {
+	text-align: center;
+
+	.tt_tabs_navigation {
+		display: inline-block;
+		width: auto !important;
+
+		margin-bottom: 15px;
+
+		li {
+			margin-right: 15px !important;
+			margin-bottom: 0px !important;
+
+			float: none;
+			display: inline-block;
+		}
+
+		li a {
+			color: #fff !important;
+			background-color: $first-main-color;
+			font-size: 11px !important;
+			font-weight: 700;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+
+			border: 2px solid $first-main-color !important;
+			padding: 6px 13px !important;;
+
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+
+			-webkit-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+			-moz-transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+			transition: color 0.2s ease-out, background-color 0.2s ease-out, border-color 0.2s ease-out !important;
+		}
+
+		.ui-tabs-active a,
+		li a:hover {
+			background-color: #f9b060;
+			border: 2px solid #f9b060 !important;
+			color: #fff !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	.tt_responsive .tt_timetable th,
+	.tt_responsive .tt_timetable .event_container,
+	.tt_responsive .tt_tooltip .tt_tooltip_content {
+		padding: 10px !important;
+	}
+}

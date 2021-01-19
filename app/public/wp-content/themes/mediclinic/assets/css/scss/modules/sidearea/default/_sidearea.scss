@@ -1,0 +1,173 @@
+/* ==========================================================================
+# Side area style - start
+========================================================================== */
+
+/* Side area general style - start
+========================================================================== */
+
+.mkdf-light-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener,
+.mkdf-light-header .mkdf-top-bar .mkdf-side-menu-button-opener {
+	color: $header-light-color !important; //Color can be set inline from widget opener;
+	
+	&.opened,
+	&:hover {
+		color: $header-light-hover-color !important; //Color can be set inline from widget opener;
+	}
+}
+
+.mkdf-dark-header .mkdf-page-header > div:not(.mkdf-sticky-header):not(.fixed) .mkdf-side-menu-button-opener,
+.mkdf-dark-header .mkdf-top-bar .mkdf-side-menu-button-opener {
+	color: $header-dark-color !important; //Color can be set inline from widget opener;
+	
+	&.opened,
+	&:hover {
+		color: $header-dark-hover-color !important; //Color can be set inline from widget opener;
+	}
+}
+
+.mkdf-side-menu-button-opener {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	
+	.mkdf-side-menu-title {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 8px 0 0;
+		color: currentColor;
+	}
+	
+	.mkdf-side-menu-lines {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		width: 17px;
+		height: 12px;
+		
+		.mkdf-side-menu-line {
+			position: absolute;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: currentColor;
+
+			@include mkdfTransition(background-color .2s ease-out);
+			
+			&.mkdf-line-1 {
+				top: 0;
+				outline: transparent solid 1px;
+			}
+			
+			&.mkdf-line-2 {
+				top: calc(50% - 1px);
+				outline: transparent solid 1px;
+			}
+			
+			&.mkdf-line-3 {
+				top: calc(100% - 2px);
+				outline: transparent solid 1px;
+			}
+		}
+	}
+	
+	&.opened,
+	&:hover {
+		color: $first-main-color;
+	}
+}
+
+.mkdf-side-menu {
+    position: fixed;
+    top: 0;
+	right: -405px;
+	width: 405px;
+    height: 100%;
+    min-height: 100%;
+	padding: 42px 50px 36px;
+    background-color: #fff;
+    text-align: left;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 9999;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+	box-shadow: -3px 0 3px rgba(0, 0, 0, 0.04);
+    @include mkdfTransition(all .6s cubic-bezier(.77,0,.175,1));
+
+    .mkdf-close-side-menu-holder {
+        position: absolute;
+	    top: 36px;
+	    right: 30px;
+        z-index: 1000;
+    }
+
+	a.mkdf-close-side-menu {
+		display: block;
+		color: #121212;
+		font-size: 36px;
+		z-index: 1000;
+
+		&:hover {
+			color: $default-text-color;
+		}
+
+		span {
+			display: block;
+			line-height: inherit;
+
+			&:before {
+				display: block;
+				line-height: inherit;
+			}
+		}
+	}
+}
+
+.admin-bar .mkdf-side-menu .mkdf-close-side-menu-holder {
+    top: 32px;
+}
+
+/* Side area general style - end
+========================================================================== */
+
+/* Side area slides over content style - start
+========================================================================== */
+
+.mkdf-side-menu-slide-from-right {
+
+    .mkdf-wrapper {
+
+        .mkdf-cover {
+            z-index: -1;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+        }
+    }
+}
+
+.mkdf-side-menu-slide-from-right.mkdf-right-side-menu-opened {
+
+    .mkdf-wrapper {
+        .mkdf-cover {
+            z-index: 3000;
+        }
+    }
+
+    .mkdf-side-menu {
+        right: 0;
+        visibility: visible;
+    }
+}
+
+/* Side area slides over content style - end
+========================================================================== */
+
+/* ==========================================================================
+# Side area style - end
+========================================================================== */

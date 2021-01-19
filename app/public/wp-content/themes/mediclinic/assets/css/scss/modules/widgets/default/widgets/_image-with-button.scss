@@ -1,0 +1,19 @@
+.mkdf-image-with-button-holder {
+	padding: 30px 10px 40px 20px;
+	background-size: cover;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	.mkdf-widget-title-holder {
+		margin-bottom: 0!important;
+		.mkdf-widget-title {
+			margin-top: 0!important;
+			color: #fff!important;
+			font-size: 24px!important;
+		}
+	}
+	p {
+		color: #ffffff;
+		margin-bottom: 30px;
+	}
+}

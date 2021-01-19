@@ -1,0 +1,237 @@
+/* ==========================================================================
+   Blog List shortcode global style - begin
+   ========================================================================== */
+
+.mkdf-blog-list-holder {
+	@include mkdfRelativeHolderLayout();
+	clear: both;
+	
+	.mkdf-blog-list {
+		@include mkdfRelativeHolderLayout();
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	.mkdf-bl-item {
+		@include mkdfRelativeHolderLayout();
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	.mkdf-bli-inner {
+		@include mkdfRelativeHolderLayout();
+	}
+	
+	.mkdf-bli-content {
+		@include mkdfRelativeHolderLayout();
+		box-sizing: border-box;
+	}
+	
+	.mkdf-post-image {
+		@include mkdfRelativeHolderLayout();
+		
+		img {
+			display: block;
+		}
+		
+		a {
+			display: block;
+			
+			&:after {
+				@include mkdfAbsoluteHolderLayout();
+				content: '';
+				background: rgba(#fff, .35);
+				opacity: 0;
+				@include mkdfTransition(opacity 0.5s ease);
+			}
+			
+			&:hover {
+				
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.mkdf-bli-info-top{
+		@include mkdfRelativeHolderLayout();
+		margin: 45px 0 1px;
+		clear: both;
+
+
+
+		> div {
+			font-family: $default-heading-font;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+			line-height: 1.2;
+			float: left;
+			padding: 0 5px 5px 0;
+
+			&:last-child {
+				padding: 0 0 5px;
+			}
+
+			&:not(.mkdf-post-info-author){
+				font-weight: 500;
+			}
+
+			span{
+				margin-left: 5px;
+			}
+
+			a {
+				color: $second-main-color;
+
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+
+	}
+
+	.mkdf-bli-info {
+		@include mkdfRelativeHolderLayout();
+		margin: 35px 0 8px;
+		clear: both;
+
+		> div {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 13px;
+			line-height: 1.2;
+			float: left;
+			padding: 0 20px 5px 0;
+
+			&:last-child {
+				padding: 0 0 5px;
+			}
+
+			a {
+				color: $default-text-color;
+
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+	}
+
+	.mkdf-bli-info-bottom{
+		@include mkdfRelativeHolderLayout();
+		clear: both;
+		margin-top: 24px;
+		padding-top: 14px;
+		border-top: 1px solid #cacaca;
+
+		> div {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			font-size: 13px;
+			line-height: 1.2;
+			float: left;
+			width: 50%;
+
+			&.mkdf-blog-share{
+				margin: 12px 0;
+				text-align: right;
+			}
+
+			&:last-child {
+				padding: 0 0 5px;
+			}
+
+			a {
+				color: #333;
+
+				&:hover {
+					color: $first-main-color;
+				}
+			}
+		}
+
+		.mkdf-social-share-holder.mkdf-list li {
+			margin-right: 18px;
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				font-size: 13px;
+			}
+		}
+	}
+	
+	.mkdf-post-title {
+		margin: 0;
+	}
+	
+	.mkdf-bli-excerpt {
+		@include mkdfRelativeHolderLayout();
+		margin-top: 0;
+		
+		.mkdf-post-excerpt {
+			margin: 9px 0 0;
+			
+			p {
+				margin: 0;
+			}
+			
+			&:after {
+				content: '...';
+			}
+		}
+	}
+	
+	.mkdf-post-read-more-button {
+		@include mkdfRelativeHolderLayout();
+		margin: 12px 0 0;
+		
+		a {
+			padding: 0;
+			margin: 0;
+			color: $first-main-color;
+			
+			&:hover {
+				color: $default-heading-color;
+			}
+		}
+	}
+	
+	/***** Columns Space style - begin *****/
+	
+	$columns_space_label: ('no', 'tiny', 'small', 'normal');
+	$columns_space: (0, 5, 10, 15);
+	
+	@for $i from 0 to length($columns_space_label) {
+		&.mkdf-bl-#{nth($columns_space_label,$i+1)}-space {
+			$column_width: nth($columns_space, $i+1);
+			$column_width_margin: $column_width * 2;
+			
+			.mkdf-bl-wrapper {
+				@if($column_width == 0) {
+					margin: 0;
+				} @else {
+					margin: 0 -#{$column_width}px;
+				}
+			}
+			
+			.mkdf-bl-item {
+				padding: 0 #{$column_width}px;
+				margin: 0 0 #{$column_width_margin}px;
+			}
+		}
+	}
+	
+	/***** Columns Space style - end *****/
+}
+/* ==========================================================================
+   Blog List shortcode global style - end
+   ========================================================================== */
