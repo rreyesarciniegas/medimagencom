@@ -18,6 +18,11 @@
  * @package WordPress
  */
 
+@ini_set( 'upload_max_filesize' , '256M' );
+@ini_set( 'post_max_size', '128M');
+@ini_set( 'memory_limit', '256M' );
+@ini_set( 'max_execution_time', '300' );
+@ini_set( 'max_input_time', '300' );
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'paktamy' );
